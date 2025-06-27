@@ -28,10 +28,14 @@ nav {
   align-items: center;
   background-color: #ffc017;
   padding: 1.4em;
+  box-sizing: border-box;
   font-size: 0.9em;
   font-weight: bold;
   text-align: center;
   border-bottom: 1px solid #191919;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 nav ul {
   display: flex;
@@ -66,6 +70,7 @@ nav img {
   font-size: 0.8em;
 }
 .hero {
+  margin-top: 71px;
   padding: 1em;
   background-color: #ffc017;
   display: flex;
