@@ -23,6 +23,14 @@ a:visited {
   color: #191919;
 }
 nav {
+  border-bottom: 1px solid #191919;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #ffc017;
+}
+.navbox {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,10 +40,6 @@ nav {
   font-size: 0.9em;
   font-weight: bold;
   text-align: center;
-  border-bottom: 1px solid #191919;
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 nav ul {
   display: flex;
@@ -70,14 +74,24 @@ nav img {
   font-size: 0.8em;
 }
 .hero {
-  margin-top: 71px;
+  margin-top: 5%;
   padding: 1em;
+  padding-top: 1.8em;
+  padding-bottom: 0;
   background-color: #ffc017;
   display: flex;
   flex-direction: column;
   height: 250px;
   justify-content: space-around;
   border-bottom: 1px solid #191919;
+  position: relative;
+}
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  justify-content: space-around;
+
   position: relative;
 }
 h1 {
@@ -276,7 +290,6 @@ nav ul li:nth-child(2) {
     display: revert;
     position: absolute;
     left: 40%;
-    bottom: 10%;
   }
   nav ul li:nth-child(1),
   nav ul li:nth-child(2) {
@@ -298,5 +311,28 @@ nav ul li:nth-child(2) {
   }
   .trending-nmb {
     padding-top: 13px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .trending-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .navbox,
+  .hero-container,
+  main {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .hidden {
+    left: 50%;
+  }
+  .trending-card {
+    max-width: 33%;
+    height: 120px;
+  }
+  .finalcontainer {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
